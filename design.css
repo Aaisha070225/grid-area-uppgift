@@ -1,0 +1,44 @@
+.container{
+    background-color: black;
+    display: grid;
+    width: 100vw;
+    min-height: 100vh;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-auto-rows: minmax(60px, auto); 
+/*     grid-template-rows: 1fr 3fr 1fr; */
+
+    grid-template-areas: 
+    "header header header header header"
+     "main main main main sidebar"
+     "main main main main  . "
+    "footer footer footer footer footer";
+
+    gap: 15px;
+}
+
+header{
+    grid-area: header;
+    background-color: lightpink; 
+    padding: 10px;
+
+}
+main{
+    grid-area: main;
+    background-color: lightyellow;
+padding: 10px;
+}
+aside{
+    grid-area: sidebar;
+ /*    background-image: url(bilder/gashud-musik-dragare.jpg);
+    background-size: auto; */
+  
+}
+footer{
+    grid-area: footer;
+    background-color: lightcyan;
+}
+
+#music{
+    width: 100%;
+    height: 100%;
+}
